@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>PEOPLE ANALITYCS SYSTEM - BS&X</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+
+    <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">BS&X</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href={{url_for('login')}}>Portal</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">PEOPLE ANALITYCS</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Uma gestão orientada por dados já é a realidade de diversos setores dentro de inúmeras empresas, e a gestão de pessoas não poderia ficar para trás. Quem atua no departamento já deve ter escutado algo sobre People Analytics para RH, um processo de coleta, organização e análise de dados.</h2>
+                        <a class="btn btn-primary" href="#about">Conheça</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Entenda sobre o novo RH estratégico</h2>
+                        <p class="text-white-50">
+                            People Analytics é um método de análise de dados que aplica estatística, tecnologia de ponta e expertise para ajudar na tomada de decisões da gestão de pessoas.
+
+                            O processo consiste na coleta, organização e análise de dados sobre processos e colaboradores e auxilia o departamento de recursos humanos a antecipar tendências e aprimorar sua gestão estratégica.
+
+                            Assim, essa técnica permite uma análise mais profunda sobre o capital humano e ajuda a mensurar o engajamento, a produtividade e a satisfação dos colaboradores no ambiente de trabalho.
+
+                            O People Analytics, portanto, é uma ferramenta importante para a solução de problemas dentro do RH, isso porque, ele pode ajudar a investigar e identificar fatores como baixa produtividade, baixo engajamento, dificuldades de retenção de talentos e queda na satisfação dos clientes.
+
+                            Embora o People Analytics para RH esteja constantemente relacionado à tecnologia de ponta, ele não necessariamente precisa ser aplicado utilizando a inteligência artificial. A coleta de dados pode ser feita por meio de diversas fontes, como redes sociais, metadados e até mesmo as informações que o setor já dispõe sobre os colaboradores.
+
+                            Depois de coletados e organizados os dados, o RH deve cruzar as informações para validar hipóteses e encontrar soluções. Esse tipo de análise fica muito mais simples quando o departamento dispõe de uma ferramenta tecnológica, contudo, se a empresa ainda não fez esse investimento, a equipe já pode começar a experimentar o método de forma manual para, então, buscar um aperfeiçoamento.
+                            <a href="{{url_for('login')}}">Portal</a>.
+                        </p>
+                    </div>
+                </div>
+                <img class="img-fluid" src="{{ url_for('static', filename='assets/img/sobre.png') }}" alt="..." />
+            </div>
+        </section>
+
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{{ url_for('static', filename='assets/img/bg-masthead2.jpg') }}" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Gestão Eficiente e em Tempo Real</h4>
+                            <p class="text-black-50 mb-0">Nosso ERP foi idealizado através de pesquisas de campo, para atender uma demanda latente de customização de indicadores para as reais necessidades das organizações focado na área de People Analytics e levando em consideração suas especificidades.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static', filename='assets/img/bg-indicadores.jpg') }}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-justify">
+                                    <h4 class="text-white">Indicadores Estratégicos</h4>
+                                    <p class="mb-0 text-white-50">O Módulo de indicadores tem o objetivo de criar um painel automatizado, com os principais indicadores chaves de People Analitycs, retroalimentados de forma dinâmica, ágil e com robustez. Possibilitar análises aprofundadas para tomada decisão, além de possibilitar o desenvolvimento de metas e acompanhamento de seus atingimentos.</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Two Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static', filename='assets/img/bg-remuneracao.jpg') }}" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Estrutura para Remuneração: Movimentações, Cargos e Salários</h4>
+                                    <p class="mb-0 text-white-50">O módulo de Remuneração, Movimentações, Cargos e Salários tem o objetivo de estruturar a área de Remuneração com as melhores práticas e metodologias do mercado. Engloba um fluxo sério e eficiente para agilizar a solicitação e todo o processo de movimentações, além de auxiliar a manutenção e estrutura de cargos e salários, que é essêncial na política de remuneração e movimentações.</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Three Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static', filename='assets/img/bg-orcamento.jpg') }}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Construção Orçamentária (Budget)</h4>
+                                    <p class="mb-0 text-white-50">O módulo Orçamentário é importantantíssimo, através dele e das boas políticas da cadastros e processos, será possível construir toda a visão de números e impactos que afetam toda a organização. Será possível acompanhar os principais impactos financeiros na área de Pessoas. O módulo comporta três versões de utilização, a construção orçamentária Anual também chamada de Budget (Escrito na Pedra); A construção orçamentária no Modelo Base Zero (OBZ); e a Revisão Orçamentária empregada mensalmente (FORECAST).</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Four Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static', filename='assets/img/bg-rs.jpg') }}" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Recrutamento e Seleção</h4>
+                                    <p class="mb-0 text-white-50">O módulo de Recrutamento e Seleção será responsável pela Gestão das Vagas e Candidatos, e estará alinhado com a política institucional de cargos e salários, após o fluxo de aprovação da vagas no processo de movimentação e a conciliação da solicitação da vaga à uma cadeira disponível (vaga por substituição) ou a criação dessa cadeira no Budget (nova vaga). Integração entre o time de Recrutamento e Seleção e o time de Folha de Pagamento e Beneficios para a admissão do novo colega e gestão de Documentos. Atração e Retenção de talentos, além de um processo de entrevista de desligamento, também são ferramentas disponíveis.</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Five Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static', filename='assets/img/bg-sso.jpg') }}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Saúde e Segurança Ocupacional</h4>
+                                    <p class="mb-0 text-white-50">O módulo de SSO será responsável pelo conjunto de ações que elevam o bem-estar corporativo e agregam na produtividade de toda a organização. Nesses tempos difíceis de pandemia uma área focada no bem estar de seus colaboradores é essencial para um direcionamento seguro de boas práticas e informações para enfrentarmos este cenário de todo tipo de doenças.</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Six Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static', filename='assets/img/bg-treinamento.jpg') }}" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Treinamento</h4>
+                                    <p class="mb-0 text-white-50">O módulo de Treinamento será responsável pela Experiência e Desenvolvimento do Colega em seu ciclo na organização, conterá ferramentas intuitivas e um canal de aproximação com o colega. Todos os colegas terão acesso ao portal onde poderão manter seu currículo atualizado e ao longo de sua jornada de aprendizado poderão ser informados de posições abertas que se enquadrem em seu perfil. Além de conter um repositório de arquivos, vídeos e materiais informativos.</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Seven Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static', filename='assets/img/bg-folhabeneficios.jpg') }}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Folha de Pagamento e Benefícios</h4>
+                                    <p class="mb-0 text-white-50">O módulo de Folha de Pagamento e Benefícios será responsável pela integração entre o sistema de processamento e os indicadores chaves do negócio, conta com a possibilidade de realizar importações de folha para realizar checagens essenciais de controle e auxiliar na gestão operacional dos processos.</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Inscreva-se para receber as análises!</h2>
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN" action="/subscribe" method="POST">
+                            <!-- Email address input-->
+                            <div class="row input-group-newsletter">
+                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Insira seu e-mail corporativo..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
+                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Quero ser Notificado!</button></div>
+                            </div>
+                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
+                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3 mt-2 text-white">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Endereço</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Colégio - Rio de janeiro - RJ
+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">E-mail</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="#!">thyago.borba1@gmail.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Telefone</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">+55(21) 97102-0345 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Todos os Direitos Autorais Reservados</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

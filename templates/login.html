@@ -1,0 +1,81 @@
+<!doctype html>
+  <html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %} Passaporte {% endblock %}</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+  </head>
+
+  <body>
+  <!-- Flash messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+
+        Category: {{ messages[0][0] }}
+        {{ messages[0][1] }}
+
+    {% endif %}
+  {% endwith %}
+
+  {% block content %}
+  <form action="{{ url_for('login')}}", method="POST">
+    <div class="container-fluid form-container">
+      <div class="container login-container">
+          <div class="row">
+              <div class="col-md-5 content-part">
+                  <h4 class="logo">Conta Bservice</h4>
+
+                  <img src="{{ url_for('static', filename='assets/images/feature-img-05.png') }}" alt="">
+
+                  <h2>Obtenha visibilidade instantânea de todo o trabalho da sua equipe.</h2>
+                  <p>Não perca tempo com tarefas manuais e tediosas. Deixe a automação fazer isso por você. Simplifique os fluxos de trabalho,
+                  para reduzir erros e economizar tempo e assim resolver problemas mais importantes.</p>
+              </div>
+              <div class="col-md-7 form-part">
+                <div class="row">
+                   <p class="signinlink">Não possui conta. <a href={{url_for('register')}}>Faça seu registro! </a></p>
+                   <p class="signinlink"><a href={{url_for('index')}}>Inicio!</a></p>
+
+                  <div class="col-lg-8 col-md-11 login formcol mx-auto">
+                       <h3>Entre em sua Bservice</h3>
+                      
+                       <div class="form-floating mb-3">
+                        {{ form.usuario(class='form-control', id="floatingInput1", placeholder='Usuario', autocomplete='off', autofocus=true) }}
+                        <label for="floatingInput">Usuario</label>
+                           <ul>
+                               {% for error in form.usuario.errors %}
+                                <li>{{ error }}</li>
+                               {% endfor %}
+                           </ul>
+                      </div>
+                      <div class="form-floating">
+                        {{ form.senha(class='form-control', placeholder='Senha') }}
+                        <label for="floatingPassword">Senha</label>
+                          <ul>
+                               {% for error in form.senha.errors %}
+                                <li>{{ error }}</li>
+                               {% endfor %}
+                           </ul>
+                      </div>
+                      <div class="form-floating">
+                          {{ form.confirma }}
+                      </div>
+
+                      {{ form.csrf_token }}
+
+                  </div>
+                 
+                </div>
+                 
+              </div>
+          </div>
+      </div>
+    </div> 
+  </form>
+  {% endblock %}
+  </body>
+</html>
